@@ -33,17 +33,15 @@ Use it raw or like credential `{% credential mysql_connection %}`
 
 2) Write SQL:
 ```sql
-select id, title, age, weight from tbl_girls where age >= 18 order by weight, age limit 2
+select id, customer, amount from orders where amount >= 1000 order by customer, amount limit 2
 ```
 Will be emitted events:
 ```json
 [
-    {"id":123456762, "title": "Ann", "age": 21, "weight": 45},
-    {"id":123456713, "title": "Julia", "age": 18, "weight": 47}
+    {"id":123456762, "customer": "Arturo", "amount": 2100},
+    {"id":123456713, "customer": "Julia", "amount": 1800}
 ]
 ```
-
-Please checkout the [Huginn MySQL example Screencast](https://youtu.be/RV5A5awkDHA)!
 
 ## Development
 
